@@ -21,10 +21,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
 
 ENV ROS2_WS /opt/ros2_ws
 RUN mkdir -p $ROS2_WS/src
-WORKDIR /opt/ros2_ws/src
+WORKDIR /opt/ros2_ws/src/obstacle_counter
 COPY . .
 WORKDIR $ROS2_WS
 RUN colcon build --cmake-args -DSECURITY=ON --no-warn-unused-cli --symlink-install
-                  
 RUN source /opt/ros/humble/setup.bash 
 RUN source /opt/ros2_ws/install/local_setup.bash
