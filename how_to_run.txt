@@ -1,0 +1,57 @@
+Abrir 3 terminais
+
+
+1 terminal:
+
+xhost + local:docker
+
+export DISPLAY=:1
+
+sudo docker run --name obstacle_counter -it --net=host --device /dev/dri/ -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority:ro vinihernech/obsctacle_detector:v1
+
+cd src/obstacle_counter
+
+. ros2_startup.sh 
+
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+
+
+2 terminal: 
+
+xhost + local:docker
+
+export DISPLAY=:1
+
+sudo docker exec -it obstacle_counter bash 
+
+cd src/obstacle_counter
+
+. ros2_startup.sh 
+
+ros2 launch nav2_bringup bringup_launch.py map:=/opt/ros2_ws/src/obstacle_counter/maps/map.yaml
+
+
+3 terminal:
+
+xhost + local:docker
+
+export DISPLAY=:1
+
+sudo docker exec -it obstacle_counter bash 
+
+cd src/obstacle_counter
+
+. ros2_startup.sh 
+
+ros2 launch obstacle_counter obstacle_counter.launch.py
+
+
+
+
+
+
+
+ 
+
+
+
