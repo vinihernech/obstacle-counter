@@ -42,7 +42,7 @@ O critério de parada ocorre quando encontra-se o cluster principal, que represe
  
 ## Instruções de execução
 
-O projeto pode ser executado localmente, mas recomenda-se a utilização de um container Docker. Caso não tenha o Dokcker instalado, basta realizar sua instação neste [link](https://docs.docker.com/desktop/install/linux-install/).
+O projeto pode ser executado localmente, mas recomenda-se a utilização de um container Docker. Caso não tenha o Docker instalado, basta realizar sua instação neste [link](https://docs.docker.com/desktop/install/linux-install/).
 Com o Docker baixado e instalado na máquina Linux, deve-se abrir 3 terminais e executar os comandos abaixo nos respectivos terminais.
 
 ### 1 terminal:
