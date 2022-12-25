@@ -51,7 +51,7 @@ Com o Docker baixado e instalado na máquina Linux, deve-se abrir 3 terminais e 
 
 ```export DISPLAY=:1```
 
-```sudo docker run --name obstacle_counter -it --net=host --device /dev/dri/ -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority:ro vinihernech/obsctacle_detector:v1```
+```sudo docker run --name obstacle_counter -it --net=host --device /dev/dri/ -e DISPLAY=$DISPLAY -v $HOME/.Xauthority:/root/.Xauthority:ro vinihernech/obsctacle_detector:v3```
 
 ```cd src/obstacle_counter```
 
